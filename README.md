@@ -28,7 +28,8 @@ File: mainscreen.html
 Line: 70-74
 Change: Added the products: “Work Station”, “Desktop”, “Laptop”, “Gaming PC” and “Smartphone”
 
-Commited with message "Customized the mainscreen.html file for customer shop"
+Commited and pushed with message "Customized the mainscreen.html file for customer shop"
+
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
@@ -44,14 +45,21 @@ File: mainscreen.html
 Line: 75
 Change: Added an “About Us” button to navigate to the about page
 
-Committed with message "Added about page and buttons to navigate to and from the about page and main screen"
-
-
+Committed and pushed with message "Added about page and buttons to navigate to and from the about page and main screen"
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
+File: BootStrapData.java
+Line: 35
+Change: Added if statement to check if part and repository are both empty
+
+File: BootStrapData.java
+Line: 36-78
+Change: Added 5 sample parts and 5 sample products
+
+Commited and pushed with message "Added sample inventory with 5 parts and products"
 
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
