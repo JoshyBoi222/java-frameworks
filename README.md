@@ -67,6 +67,19 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
 •  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 •  Display a message that indicates the success or failure of a purchase.
 
+File: mainscreen.html
+Line: 93
+Change: Added a "Buy Now" button
+
+File: BuyProductController.java
+Line: Whole file
+Change: Created a new controller to update and delete products
+
+File: mainscreen.html
+Line: 22-24
+Change: Updated file to display the message that shows if the purchase was successful or not
+
+Committed and pushed with message "Created buy now button that updates and deletes product and displays a message showing if purchase was successful or failed"
 
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
