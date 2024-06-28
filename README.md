@@ -32,6 +32,21 @@ Commited with message "Customized the mainscreen.html file for customer shop"
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
+File: about.html
+Line: Whole File
+Change: Created a new file, describing the company and added button to navigate to main screen
+
+File: AboutController.java
+Line: Whole File
+Change: Created a new controller to map the about URL to the template
+
+File: mainscreen.html
+Line: 75
+Change: Added an “About Us” button to navigate to the about page
+
+Committed with message "Added about page and buttons to navigate to and from the about page and main screen"
+
+
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
