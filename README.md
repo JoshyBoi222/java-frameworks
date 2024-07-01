@@ -158,6 +158,12 @@ Committed and pushed with message "Added code to display error messages when inv
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
+File: PartTest.java
+Line: 160-194
+Change:  Added code to ensure that the methods for the minimum and maximum inventory works properly
+
+Committed and pushed with message “Tested two unit tests to see if the setter and getter methods for min and max inventory code works correctly”
+
 
 
 J.  Remove the class files for any unused validators in order to clean your code.
