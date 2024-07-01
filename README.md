@@ -140,6 +140,20 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
+File: AddInhousePartController.java
+Line: 44-49
+Change: Added error message when inventory goes below minimum inventory or above maximum inventory
+
+File: AddOursourcedPartController.java
+Line: 45-50
+Change: Added error message when inventory goes below minimum inventory or above maximum inventory
+
+File: EnufPartsValidator.java
+Line: 36-55
+Change: Added code to check if updating or adding the product will make the parts value go below the minimum value and an error message if it does
+
+Committed and pushed with message "Added code to display error messages when inventory goes below minimum or maximum number of parts"
+
 
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
