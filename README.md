@@ -2,7 +2,6 @@
 ## D287 – JAVA FRAMEWORKS
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
 Changed Shop Title and Heading
 File: mainscreen.html
@@ -31,6 +30,7 @@ Change: Added the products: “Work Station”, “Desktop”, “Laptop”, “
 Commited and pushed with message "Customized the mainscreen.html file for customer shop"
 
 
+
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
 File: about.html
@@ -48,8 +48,8 @@ Change: Added an “About Us” button to navigate to the about page
 Committed and pushed with message "Added about page and buttons to navigate to and from the about page and main screen"
 
 
+
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
 File: BootStrapData.java
 Line: 35
@@ -60,6 +60,7 @@ Line: 36-78
 Change: Added 5 sample parts and 5 sample products
 
 Commited and pushed with message "Added sample inventory with 5 parts and products"
+
 
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
@@ -82,12 +83,55 @@ Change: Updated file to display the message that shows if the purchase was succe
 Committed and pushed with message "Created buy now button that updates and deletes product and displays a message showing if purchase was successful or failed"
 
 
+
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
 •  Add additional fields to the part entity for maximum and minimum inventory.
 •  Modify the sample inventory to include the maximum and minimum fields.
 •  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+
+File: Parts.java
+Line: 31-34
+Change: Added fields for minimum and maximum inventory
+
+File: Parts.java
+Line: 44-58
+Change: Updated the Part constructors to include minInv and maxInv
+
+File: Parts.java
+Line: 89-95
+Change: Added getters and setters for minInv and maxInv
+
+File: Parts.java
+Line: 105
+Change: Added a method to check if inventory is between min and max values
+
+File: BootStrapData.java
+Line: 41-74
+Change: Added min and max inventory fields for parts of the sample inventory
+
+File: InhousePartForm.html
+Line: 24-28
+Change: Added text input for minInv and maxInv
+
+File: OuthousePartForm.html
+Line: 25-29
+Change: Added text input for minInv and maxInv
+
+File: application.properties
+Line: 6
+Change: Renamed the database file to “task-G-completed”
+
+File: AddInhousePartController.java
+Line: 44-47
+Change: Updated code to check if inventory value is between minimum and maximum values
+
+File: AddOutsourcedPartController.java
+Line: 45-48
+Change: Updated code to check if inventory value is between minimum and maximum values 
+
+Committed and pushed with message "Added fields for minimum and maximum inventory for parts, renamed database file and added method to ensure that inventory is between min and max values"
 
 
 

@@ -38,26 +38,40 @@ public class BootStrapData implements CommandLineRunner {
             part1.setPrice(300.00);
             part1.setInv(10);
             part1.setPartId(1001);
+            part1.setMinInv(1);
+            part1.setMaxInv(20);
+
             InhousePart part2 = new InhousePart();
             part2.setName("Motherboard");
             part2.setPrice(250.00);
             part2.setInv(20);
             part2.setPartId(1002);
+            part2.setMinInv(10);
+            part2.setMaxInv(30);
+
             InhousePart part3 = new InhousePart();
             part3.setName("RAM");
             part3.setPrice(200.00);
             part3.setInv(30);
             part3.setPartId(1003);
+            part3.setMinInv(20);
+            part3.setMaxInv(40);
+
             InhousePart part4 = new InhousePart();
             part4.setName("Storage");
             part4.setPrice(150.00);
             part4.setInv(40);
             part4.setPartId(1004);
+            part4.setMinInv(30);
+            part4.setMaxInv(50);
+
             InhousePart part5 = new InhousePart();
             part5.setName("GPU");
             part5.setPrice(100.00);
             part5.setInv(50);
             part5.setPartId(1005);
+            part5.setMinInv(40);
+            part5.setMaxInv(60);
 
             partRepository.save(part1);
             partRepository.save(part2);
