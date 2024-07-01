@@ -3,26 +3,26 @@
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 
-Changed Shop Title and Heading
 File: mainscreen.html
 Line: 14
 Change: Changed the content inside <title> tag from "My Bicycle Shop" to "Little Bit Better"
+
 File: mainscreen.html
 Line: 19
 Change:  Change the content inside <h1> tag from "Shop" to "Little Bit Better"
 
-Changed the Parts Section Heading and Added Parts
 File: mainscreen.html
 Line: 21
 Change: Changed the content inside <h1> tag from "Parts" to "Components".
+
 File: mainscreen.html
 Lines: 30-34
 Change: Added the parts: “CPU”, “Motherboard”, “RAM”, “Storage” and “Power Supply”
 
-Changed the Products Section Heading and Added Products
 File: mainscreen.html
 Line: 56
 Change: Changed the content inside <h2> tag from “Products” to “Devices”
+
 File: mainscreen.html
 Line: 70-74
 Change: Added the products: “Work Station”, “Desktop”, “Laptop”, “Gaming PC” and “Smartphone”
@@ -168,6 +168,8 @@ Committed and pushed with message “Tested two unit tests to see if the setter 
 
 J.  Remove the class files for any unused validators in order to clean your code.
 
+File: DeletePartValidator.java
+Line: Whole file
+Change: Deleted the entire file to clean up project code
 
-
-K.  Demonstrate professional communication in the content and presentation of your submission.
+Committed and pushed with message “Removed the DeletePartValidator.java file as it had no usages in the project file”
