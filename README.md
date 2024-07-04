@@ -47,8 +47,6 @@ File: src/main/resources/templates/mainscreen.html
 Line: 80    
 Change: Added an “About Us” button to navigate to the about page
 
-Committed and pushed with message "Added about page and buttons to navigate to and from the about page and main screen"
-
 
 
 Task E -
@@ -62,9 +60,6 @@ Change: Added if statement to check if part and repository are both empty
 File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
 Line: 36-78
 Change: Added 5 sample parts and 5 sample products
-
-Commited and pushed with message "Added sample inventory with 5 parts and products"
-
 
 
 
@@ -84,8 +79,6 @@ File: src/main/resources/templates/mainscreen.html
 Line: 22-24
 Change: Updated file to display the message that shows if the purchase was successful or not
 
-Committed and pushed with message "Created buy now button that updates and deletes product and displays a message showing if purchase was successful or failed"
-
 
 
 Task G -
@@ -100,15 +93,15 @@ File: src/main/java/com.example.demo/domainPart.java
 Line: 44-58
 Change: Updated the Part constructors to include minInv and maxInv
 
-File: src/main/java/com.example.demo//domainPart.java
+File: src/main/java/com.example.demo/domainPart.java
 Line: 89-95
 Change: Added getters and setters for minInv and maxInv
 
-File: src/main/java/com.example.demo//domain/Part.java
+File: src/main/java/com.example.demo/domain/Part.java
 Line: 105
 Change: Added a method to check if inventory is between min and max values
 
-File: src/main/java/com.example.demo//bootstrap/BootStrapData.java
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
 Line: 41-74
 Change: Added min and max inventory fields for parts of the sample inventory
 
@@ -128,7 +121,7 @@ File: src/main/java/com.example.demo/controllers/AddInhousePartController.java
 Line: 44-47
 Change: Updated code to check if inventory value is between minimum and maximum values
 
-File: src/main/java/com.example.demo//controllers/AddOutsourcedPartController.java
+File: src/main/java/com.example.demo/controllers/AddOutsourcedPartController.java
 Line: 45-48
 Change: Updated code to check if inventory value is between minimum and maximum values 
 
@@ -136,7 +129,25 @@ File: src/main/resources/templates/mainscreen.html
 Line: 40
 Change: Added an "Add Outsourced Part" button
 
-Committed and pushed with message "Added fields for minimum and maximum inventory for parts, renamed database file and added method to ensure that inventory is between min and max values"
+File: src/main/java/com.example.demo/controllers/AddOutsourcedPartController.java
+Line: 35
+Change: Changed class from Part to OutsourcedPart
+
+File: src/main/java/com.example.demo/controllers/AddOutsourcedPartController.java
+Line: 40
+Change: Corrected the URL mapping in PostMapping to the proper one
+
+File: src/main/java/com.example.demo/controllers/AddOutsourcedPartController.java
+Line: 49
+Change: Deleted a space typo in error message
+
+File: src/main/resources/templates/OutsourcedPartForm.html
+Line: 12
+Change: Corrected the action URL field to proper one
+
+File: src/main/resources/templates/OutsourcedPartForm.html
+Line: 26 and 29
+Change: Fixed the "Error" typo for the fields method
 
 
 
@@ -144,7 +155,7 @@ Task H -
 
 Prompt: Add validation for the maximum and minimum fields. Display error messages for each error scenario.
 
-File: src/main/java/com.example.demo/controllersAddInhousePartController.java
+File: src/main/java/com.example.demo/controllers/AddInhousePartController.java
 Line: 44-49
 Change: Added error message when inventory goes below minimum inventory or above maximum inventory
 
@@ -156,7 +167,17 @@ File: src/main/java/com.example.demo/validators/EnufPartsValidator.java
 Line: 36-55
 Change: Added code to check if updating or adding the product will make the parts value go below the minimum value and an error message if it does
 
-Committed and pushed with message "Added code to display error messages when inventory goes below minimum or maximum number of parts"
+File: src/main/java/com.example.demo/controllers/AddInhousePartController.java
+Line: 39
+Change: Corrected the URL mapping in PostMapping to the proper one
+
+File: src/main/java/com.example.demo/controllers/AddInhousePartController.java
+Line: 48
+Change: Added a period in the error message
+
+File: src/main/resources/templates/InhousePartForm.html
+Line: 11
+Change: Corrected the action URL field to proper one
 
 
 
@@ -168,8 +189,6 @@ File: src/test/java/com.example/demo/domain/PartTest.java
 Line: 160-194
 Change:  Added code to ensure that the methods for the minimum and maximum inventory works properly
 
-Committed and pushed with message “Tested two unit tests to see if the setter and getter methods for min and max inventory code works correctly”
-
 
 
 Task J -
@@ -179,5 +198,3 @@ Prompt: Remove the class files for any unused validators in order to clean your 
 File: src/main/java/com.example.demo/validators/DeletePartValidator.java
 Line: Whole file
 Change: Deleted the entire file to clean up project code
-
-Committed and pushed with message “Removed the DeletePartValidator.java file as it had no usages in the project file”
