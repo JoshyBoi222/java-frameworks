@@ -55,11 +55,55 @@ Prompt: Add a sample inventory appropriate for your chosen store to the applicat
 
 File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
 Line: 35
-Change: Added if statement to check if part and repository are both empty
+Change: Added an if statement to check if part and product repository are both empty and add the sample data if they are
 
 File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
-Line: 36-78
-Change: Added 5 sample parts and 5 sample products
+Line: 36-42
+Change: Created a new "CPU" part with sample values for price, inventory, id, minimum inventory and maximum inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 44-50
+Change: Created a new "Motherboard" part with sample values for price, inventory, id, minimum inventory and maximum inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 52-58
+Change: Created a new "RAM" part with sample values for price, inventory, id, minimum inventory and maximum inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 60-66
+Change: Created a new "Storage" part with sample values for price, inventory, id, minimum inventory and maximum inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 68-74
+Change: Created a new "GPU" part with sample values for price, inventory, id, minimum inventory and maximum inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 76-80
+Change: Save each new object to the database
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 82
+Change: Created a new "Work Station" product with sample values for price and inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 83
+Change: Created a new "Desktop" product with sample values for price and inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 84
+Change: Created a new "Laptop" product with sample values for price and inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 85
+Change: Created a new "Gaming PC" product with sample values for price and inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 86
+Change: Created a new "Smartphone" product with sample values for price and inventory
+
+File: src/main/java/com.example.demo/bootstrap/BootStrapData.java
+Line: 88-92
+Change: Save each new object to the database
 
 
 
@@ -73,7 +117,7 @@ Change: Added a "Buy Now" button
 
 File: src/main/java/com.example.demo/controllers/BuyProductController.java
 Line: Whole file
-Change: Created a new controller to update and delete products
+Change: Created a new controller to control buy now functionality, update product inventory and display the status message of a purchase
 
 File: src/main/resources/templates/mainscreen.html
 Line: 22-24
@@ -178,6 +222,26 @@ Change: Added a period in the error message
 File: src/main/resources/templates/InhousePartForm.html
 Line: 11
 Change: Corrected the action URL field to proper one
+
+File: src/main/java/com.example.demo/controllers/AddProductController.java
+Line: 80
+Change: Created a new variable "invDifference" to calculate the difference between the new and current product inventory value to determine how much the inventory needs to be adjusted
+
+File: src/main/resources/templates/AddProductController.java
+Line: 82
+Change: Created a new variable "newPartInventory" to calculate the new inventory value for each part associated with a product when the product inventory is updated
+
+File: src/main/java/com.example.demo/controllers/AddProductController.java
+Line: 82-86
+Change: Made a loop going over each part associated with the current product to ensure that any parts new inventory that falls below the minimum inventory value will display an error message instead
+
+File: src/main/resources/templates/AddProductController.java
+Line: 87-93
+Change: Created a new empty list for parts that are available for association with the current product and added a loop to help avoid duplicating the parts by only adding parts that are not associated with the current product
+
+File: src/main/resources/templates/AddProductController.java
+Line: 96-99
+Change: Added a condition to check if the inventory difference value is positive and to decrease the inventory of the associated parts if the product inventory is increased and save those changes to the database if it is.
 
 
 

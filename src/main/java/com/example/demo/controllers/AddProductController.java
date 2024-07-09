@@ -75,17 +75,31 @@ public class AddProductController {
         else {
             ProductService repo = context.getBean(ProductServiceImpl.class);
             if(product.getId()!=0) {
-                Product product2 = repo.findById((int) product.getId());
+                Product currentProduct = repo.findById((int) product.getId());
                 PartService partService1 = context.getBean(PartServiceImpl.class);
-                if(product.getInv()- product2.getInv()>0) {
-                    for (Part p : product2.getParts()) {
-                        int inv = p.getInv();
-                        p.setInv(inv - (product.getInv() - product2.getInv()));
-                        partService1.save(p);
+                int invDifference = product.getInv() - currentProduct.getInv();
+
+                for (Part part : currentProduct.getParts()) {
+                    int newPartInventory = part.getInv() - invDifference;
+                    if (newPartInventory < part.getMinInv()) {
+                        bindingResult.rejectValue("inv","error.product", "Error: Updating will drop the associated parts inventory below the minimum value ");
+                        theModel.addAttribute("parts", partService.findAll());
+                        List<Part> availableParts = new ArrayList<>();
+                        for (Part p : partService.findAll()) {
+                            if (!currentProduct.getParts().contains(p)) availableParts.add(p);
+                        }
+                        theModel.addAttribute("availparts", availableParts);
+                        theModel.addAttribute("assparts", currentProduct.getParts());
+                        return "productForm";
                     }
                 }
+            if (invDifference > 0) {
+                for (Part part : currentProduct.getParts()) {
+                part.setInv(part.getInv() - invDifference);
+                partService1.save(part);
+                }
             }
-            else{
+        } else {
                 product.setInv(0);
             }
             repo.save(product);
